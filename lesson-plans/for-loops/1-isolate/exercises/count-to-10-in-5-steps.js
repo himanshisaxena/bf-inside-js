@@ -12,6 +12,6 @@ console.log(count === 10);
 
 // begin distractors
 
-count = count; // distractor
-count = i; // distractor
-count = count + 1; // distractor
+// count = count; // distractor
+// count = i; // distractor
+// count = count + 1; // distractor
