@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -19,35 +17,35 @@ console.log('-- begin --');
 
 */
 
-// declare a variable named aTree, don't assign a value!
-_;
-console.log(aTree);
+let aTree;
+console.log(aTree); // should log undefined
 
 // assign the value "birch" to the variable aTree
-_;
-console.log(aTree);
+aTree = 'birch';
+console.log(aTree); // should log "birch"
 
 // declare a variable named turtle and assign it the name "myrtle"
-_;
-console.log(turtle);
+const turtle = 'myrtle';
+console.log(turtle); // should log "myrtle"
 
 // reassign aTree to "aspen"
-_;
-console.log(aTree);
+aTree = 'aspen';
+console.log(aTree); // should log "aspen"
 
 // declare a variable named aColor with the value "blue"
-_;
-console.log(aColor);
+let aColor = 'blue';
+console.log(aColor); // should log "blue"
 
 // log the value of turtle
-_;
+console.log(turtle); // should log "myrtle"
 
 // reassign aTree to "oak"
-_;
-console.log(aTree);
+aTree = 'oak';
+console.log(aTree); // should log "oak"
 
 // reassign aColor to "orange"
-_;
-console.log(aColor);
+aColor = 'orange';
+console.log(aColor); // should log "orange"
+
 
 console.log('-- end --');
