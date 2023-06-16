@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 let stringToRepeatify = '';
@@ -28,10 +26,10 @@ while (true) {
         repetitions = Number(repetitionsInput);
 
         /* make sure the user input a valid number */
-        if (_) {
+        if (Number.isNaN(repetitions)) {
           alert('"' + repetitionsInput + '" is not a number');
         } else {
-          inputIsNumber = _;
+          inputIsNumber = true;
         }
       }
     }
@@ -49,14 +47,12 @@ while (true) {
 let withRepeatedCharacters = '';
 
 /* iterate through each character in the user input */
-for (_) {
+for (const character of stringToRepeatify) {
   /* append each character multiple times to the new string */
-  for (_) {
+  for (let i = 0; i < repetitions; i++) {
     withRepeatedCharacters += character;
   }
 }
 
 const finalMessage = `"${stringToRepeatify}" -> "${withRepeatedCharacters}"`;
 alert(finalMessage);
-
-

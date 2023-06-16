@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 let userInput = '';
@@ -32,13 +30,23 @@ while (!userConfirmed) {
       }
     }
     /* -- BEGIN: ask the user to confirm their string and shift number -- */
+
+    const confirmMessage = 'is this correct?\n\n' + '- "' + userInput + '"\n' + '- ' + unicodeShift;
+    userConfirmed = confirm(confirmMessage);
+  }
     /* -- END -- */
   }
-}
+
 
 let encodedString = '';
 
 /* -- BEGIN: create the encoded string -- */
+for (const character of userInput) {
+  const characterCode = character.charCodeAt();
+  const newCharCode = characterCode + unicodeShift;
+  const encodedCharacter = String.fromCharCode(newCharCode);
+  encodedString += encodedCharacter;
+}
 /* -- END -- */
 
 const finalMessage = `"${userInput}" -> "${encodedString}"`;

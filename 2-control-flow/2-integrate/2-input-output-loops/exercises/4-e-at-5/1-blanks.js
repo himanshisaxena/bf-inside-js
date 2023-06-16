@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 let validInput = '';
@@ -8,13 +6,19 @@ while (true) {
   console.log('userInput:', typeof userInput, userInput);
 
   // make sure the user entered something
-  ___;
+  if (userInput === null || userInput === '') {
+    alert('that is nothing');
+    continue;
+  }
 
   // make sure it is long enough to have an "e" in the 5th letter
-  ___;
+  if (userInput.length < 5) {
+    alert('too short');
+    continue;
+  }
 
   // check if the 5th character is an "e" or "E"
-  if (_) {
+  if (userInput[4] === 'e' || userInput[4] === 'E') {
     validInput = userInput;
     break;
   }

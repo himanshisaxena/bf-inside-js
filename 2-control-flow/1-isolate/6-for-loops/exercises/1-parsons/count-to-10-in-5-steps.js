@@ -1,5 +1,3 @@
-// #todo
-
 /*
   which body will pass the assertion?
 */
@@ -9,9 +7,3 @@ for (let i = 0; i < 5; i++) {
   count = count + i;
 }
 console.log(count === 10);
-
-// begin distractors
-
-count = count; // distractor
-count = i; // distractor
-count = count + 1; // distractor

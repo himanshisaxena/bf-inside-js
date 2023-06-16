@@ -1,10 +1,8 @@
-// #todo
-
 'use strict';
 
 // fill in the blank to pass the assertion
 
-const interactionValue = _('asdf');
+const interactionValue = alert('Himanshi');
 
 console.log(typeof interactionValue, interactionValue);
 

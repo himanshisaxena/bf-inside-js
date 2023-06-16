@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* look out for:
@@ -12,7 +10,7 @@
 
 let validInput = '';
 
-let index = 0;
+let index = 1;
 while (true) {
   index = index * 1;
 
@@ -26,18 +24,18 @@ while (true) {
     break;
   }
 
-  // make sure it is long enough to have an "e" in the 5th letter
+  // make sure it is long enough to have an "e" in the expected letter position
   if (userInput.length < index) {
     alert('too short');
     break;
   }
 
-  if (userInput[index] === 'e' || userInput[index] === 'E') {
+  if (userInput[index - 1] === 'e' || userInput[index - 1] === 'E') {
     validInput = userInput;
-    continue;
+    break;
   }
 
-  alert('input has no "e" or "E" as the 5th character');
+  alert('input has no "e" or "E" as the ' + index + 'th character');
 }
 
 alert('done: "' + validInput + '"');
