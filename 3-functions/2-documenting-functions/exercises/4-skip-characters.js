@@ -1,12 +1,15 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
 
 /**
+ * Skips characters in a text based on a given skip factor.
  *
+ * @param {string} text - The text to skip characters from.
+ * @param {number} toSkip - The skip factor indicating how many characters to skip.
+ * @returns {string} - Returns the text with characters skipped based on the skip factor.
  */
+
 const skipCharacters = (text = '', toSkip = 1) => {
   if (toSkip < 1) {
     return text;

@@ -1,12 +1,15 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
 
 /**
+ * Performs a Unicode character shuffle by shifting the character codes.
  *
+ * @param {string} text - The text to perform the Unicode shuffle on.
+ * @param {number} shift - The shift value for the character codes.
+ * @returns {string} - Returns the shuffled text based on the Unicode character codes.
  */
+
 const unicodeShuffle = (text = '', shift = 0) => {
   let encodedString = '';
 
