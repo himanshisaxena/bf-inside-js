@@ -1,16 +1,15 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
 
 /**
- * _
+ * Determines if a text is long or short based on a cutoff length.
  *
- * @_ {_} [_=_] - _
- * @_ {_} [_=_] - _
- * @_ {_} _
+ * @param {string} text - The text to evaluate.
+ * @param {number} cutoff - The cutoff length to compare the text against.
+ * @returns {string} - Returns 'short' if the text length is less than the cutoff, otherwise returns 'long'.
  */
+
 const longOrShort = (text = '', cutoff = 0) => {
   if (text.length < cutoff) {
     return 'short';
