@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* for character of String
@@ -14,8 +12,13 @@ while (true) {
   userInput = prompt('enter a word to filter:');
 
   /* -- BEGIN: validate input -- */
-
+  if (userInput === '' || userInput === null) {
+    alert('nope, enter something');
+    continue;
+  }
   /* -- END: validate input -- */
+
+  break;
 }
 
 const removeVowels = confirm(`what would you like to remove from "${userInput}"?
@@ -32,7 +35,12 @@ if (removeVowels) {
 
 let filteredInput = '';
 /* -- BEGIN: filter input -- */
-
+for (const character of userInput) {
+  const lowerCaseCharacter = character.toLowerCase();
+  if (!toRemove.includes(lowerCaseCharacter)) {
+    filteredInput += character;
+  }
+}
 /* -- END: filter input -- */
 
 const finalMessage = `"${userInput}" -> "${filteredInput}"`;

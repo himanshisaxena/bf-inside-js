@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 const instructions = `Two-Player Remembery
@@ -29,8 +27,33 @@ const phrasesToRemember = `Player 2, remember these:
 `;
 alert(phrasesToRemember);
 
-/* -- BEGIN: gather player 2's guesses) -- */
+let points = 0;
 
+/* -- BEGIN: gather player 2's guesses) -- */
+const guess1 = prompt('Player 2, enter the first phrase:');
+const guess2 = prompt('Player 2, enter the second phrase:');
+const guess3 = prompt('Player 2, enter the third phrase:');
+
+if (guess1 === phrase1) {
+  points++;
+} else {
+  alert('Wrong guess! Game over!');
+  points = 0;
+}
+
+if (guess2 === phrase2) {
+  points++;
+} else {
+  alert('Wrong guess! Game over!');
+  points = 0;
+}
+
+if (guess3 === phrase3) {
+  points++;
+} else {
+  alert('Wrong guess! Game over!');
+  points = 0;
+}
 /* -- END: gather player 2's guesses -- */
 
-alert(`your score: ${points}`);
+alert(`Your score: ${points}`);
