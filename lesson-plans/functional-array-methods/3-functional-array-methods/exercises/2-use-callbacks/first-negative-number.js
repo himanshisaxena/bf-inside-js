@@ -4,4 +4,11 @@
  * @param {any[]} arr - the array of values
  * @returns {(number|undefined)} the first negative number
  */
-export const firstNegativeNumber = () => {};
+export const firstNegativeNumber = (arr = []) => {
+  const newArray = [...arr];
+  return newArray.find((item) => {
+    if (typeof item === 'number') {
+      return item < 0;
+    }
+  });
+};
