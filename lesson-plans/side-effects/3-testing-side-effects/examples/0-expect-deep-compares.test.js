@@ -29,7 +29,7 @@ describe('comparing arrays in unit tests', () => {
     });
     it('two arrays with different values', () => {
       const arr1 = ['a', 'b', 'c'];
-      const arr2 = ['a', 'b', 'c'];
+      const arr2 = ['a', 'b', 'f'];
       expect(arr1 === arr2).toEqual(false);
     });
     it('one array', () => {
