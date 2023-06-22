@@ -9,17 +9,28 @@
  * @param {number} [toSum=0] - The number who's digits will be summed.
  * @returns {number} The sum of all digits in toSum.
  */
+// const sumOfDigits = (toSum = 0) => {
+//   const digitsToSum = String(toSum);
+//   let sum = 0;
+//   for (const character of digitsToSum) {
+//     const digit = Number(character);
+
+//     sum += digit;
+//   }
+
+//   return (toSum < 0) ? -sum : sum;
+// };
+
 const sumOfDigits = (toSum = 0) => {
-  const digitsToSum = String(toSum);
+  const stringedNumber = String(toSum);
+  const onlyDigits = stringedNumber.replaceAll('.', '').replaceAll('-', '');
   let sum = 0;
-  for (const character of digitsToSum) {
-    const digit = Number(character);
-    if (Number.isNaN(digit)) {
-      sum += sum + digit;
-    }
+  for (const character of onlyDigits) {
+    const num = Number(character);
+    sum += num;
   }
 
-  return toSum > 0 ? sum : sum;
+  return toSum < 0 ? -sum : sum;
 };
 
 describe('sumOfDigits: sums the digits in a number', () => {

@@ -10,16 +10,18 @@
  * @returns {number} how many times the character appears in the text
  */
 const countCharacter = (text = '', toCount = '') => {
-  let count = _;
-  // only count if the second parameter is a single character
-  if (_._ === _) {
-    count++;
-    for (const character of text) {
-      if (character === _) {
-        __;
+  let count = 0;
+
+  if (toCount.length === 1) {
+    for (const char of text) {
+      if (char === toCount) {
+        count++;
       }
     }
+  } else {
+    return -1;
   }
+
   return count;
 };
 
