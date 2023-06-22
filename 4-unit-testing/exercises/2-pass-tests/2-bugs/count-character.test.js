@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /**
@@ -9,15 +7,17 @@
  * @param {string} [toCount=''] - The character to count, must have length 1.
  * @returns {number} How many times the character appears in the text.
  */
+
 const countCharacter = (text = '', toCount = '') => {
-  let count = -1;
+  let count = 0;
   if (toCount.length !== 1) {
-    return count;
+    return -1;
   }
 
-  count++;
   for (let character of text) {
-    count = character = toCount ? count : count + 1;
+    if (character === toCount) {
+      count++;
+    }
   }
   return count;
 };

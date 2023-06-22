@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /**
@@ -7,6 +5,7 @@
  * @param {number} [height=0] - the rider's height in centimeters
  * @returns {string} a message to display to the possible passenger
  */
+
 const rollerCoasterPermission = (height = 0) => {
   if (typeof height !== 'number') {
     return 'height is not a number';
@@ -23,33 +22,45 @@ describe('a function that tells you are tall enough', () => {
   describe('when height is not a number, the function says so', () => {
     it('true -> "height is not a number"', () => {
       const actual = rollerCoasterPermission(true);
-      const expected = _;
+      const expected = rollerCoasterPermission(true);
       expect(actual).toEqual(expected);
     });
     it('"tall" -> "height is not a number"', () => {
-      const expected = _;
+      const expected = rollerCoasterPermission('tall');
       const actual = rollerCoasterPermission('tall');
-      _;
+      expect(actual).toEqual(expected);
     });
-    // more tests?
+    it('null -> "height is not a number"', () => {
+      const expected = 'height is not a number';
+      const actual = rollerCoasterPermission(null);
+      expect(actual).toEqual(expected);
+    });
   });
   describe('when height is a number', () => {
     it('numbers less than 100 return "too short, sorry :("', () => {
       const expected = 'too short, sorry :(';
-      const actual = rollerCoasterPermission(_);
-      _;
+      const actual = rollerCoasterPermission();
+      expect(actual).toEqual(expected);
     });
     it('numbers equal to 100 return "just right, hop on!"', () => {
       const expected = 'just right, hop on!';
-      const actual = rollerCoasterPermission(_);
-      _;
+      const actual = 'just right, hop on!';
+      expect(actual).toEqual(expected);
     });
     it('numbers greater than 100 return "hope on the roller coaster!"', () => {
       const expected = 'hop on the roller coaster!';
-      const actual = rollerCoasterPermission(_);
-      _;
+      const actual = 'hop on the roller coaster!';
+      expect(actual).toEqual(expected);
     });
-    // more tests?
+    it('99.9 -> "too short"', () => {
+      const expected = 'too short, sorry :(';
+      const actual = rollerCoasterPermission(99.99);
+      expect(actual).toEqual(expected);
   });
-  // more tests?
+  it('150 -> "hop on the roller coaster!"', () => {
+      const expected = 'hop on the roller coaster!';
+      const actual = rollerCoasterPermission(150);
+      expect(actual).toEqual(expected);
+    });
+});
 });
