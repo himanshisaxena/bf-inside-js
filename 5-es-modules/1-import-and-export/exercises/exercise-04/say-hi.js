@@ -1,5 +1,6 @@
-// #todo
-
 debugger;
 
-const sayHi = __;
+// export a function
+export const sayHi = (name) => {
+  return `Hello ${name}`;
+};

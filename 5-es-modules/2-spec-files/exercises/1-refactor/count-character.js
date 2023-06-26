@@ -1,5 +1,3 @@
-// #todo
-
 /**
  * Counts how many times a specific character appears in a text.
  *
