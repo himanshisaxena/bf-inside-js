@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -14,7 +12,6 @@ console.log('-- begin --');
 const values = [NaN, 'tree', false, 42, null];
 
 // map using typeof
-// _1_types: (5) ['number', 'string', 'boolean', 'number', 'object']
 const _1_types = [];
 for (const value of values) {
   const type = typeof value;
@@ -22,7 +19,6 @@ for (const value of values) {
 }
 
 // map using boolean coercion and + 'y'
-// _2_truthiness: (5) ['falsey', 'trueuy', 'falsey', 'truey', 'falsey']
 const _2_truthiness = [];
 for (const value of values) {
   const castToBool = Boolean(value);
@@ -33,7 +29,6 @@ for (const value of values) {
 const _3_strings = ['infinity', '1.4', '1000', 'NaN'];
 
 // map according to if a string is NaNy
-// _3_areNaNy: (4) [true, false, false, true]
 const _3_areNaNy = [];
 for (const string of _3_strings) {
   const isNaNy = isNaN(string);

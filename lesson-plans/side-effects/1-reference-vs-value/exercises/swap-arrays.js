@@ -9,9 +9,7 @@ let temp;
 
 // -- swap reference types (write this code) --
 temp = a;
-
 a = b;
-
 b = temp;
 
 // -- assert the references (this is correct) --

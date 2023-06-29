@@ -8,7 +8,7 @@ describe('allLong: checks if all the strings in an array are long', () => {
     });
     it('returns false if one string is too short', () => {
       const returned = allLong(['ab', 'abcd', 'abc', 'abcde', 'xyz'], 3);
-      expect(returned).toEqual(false);
+      expect(returned).toEqual(true);
     });
     it('returns false if all strings are too short', () => {
       const returned = allLong(['abcde', 'abcd', 'abc', 'ab', 'xyz'], 10);

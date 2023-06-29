@@ -4,21 +4,19 @@ document.getElementById('pyramid-it').addEventListener('click', () => {
   debugger;
 
   // read user text
-  let userInput = readString('to-pyramid');
+
+  let toPyramid = readString('to-pyramid');
 
   // create the pyramid
-  let output = '';
-  let line = '';
-
-  for (let i = 0; i < userInput.length; i++) {
-    for (let j = i; j < userInput.length; j++) {
-      line += userInput[j];
-      
+  let pyramid = '';
+  for (let i = 0; i < toPyramid.length; i++) {
+    pyramid = pyramid + '\n';
+    for (let j = i; j < toPyramid.length ; j++) {
+    pyramid = pyramid + toPyramid[j];
     }
-    output += line + '\n';
-    line = '';
   }
 
   // display the pyramid
-  display('pyramided', output);
+
+  display('pyramided', pyramid);
 });

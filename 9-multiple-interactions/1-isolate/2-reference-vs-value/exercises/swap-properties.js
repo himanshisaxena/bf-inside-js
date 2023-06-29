@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* swap property values between two objects */
@@ -10,6 +8,7 @@ const obj2 = { a: 'x', b: 'y', c: 1 };
 let temp;
 
 // -- swap values (write this code) --
+[obj1.a, obj2.c] = [obj2.c, obj1.a];
 
 // -- assert values (this is correct) --
 console.assert(deepCompare(obj1, { a: 1, b: 2, c: 3 }), 'object 1');

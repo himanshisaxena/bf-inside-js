@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -12,7 +10,6 @@ console.log('-- begin --');
 
 const _1_words = ['chair', 'quote', 'bucket', 'sofa'];
 // keep the words with an "a"
-// _1_wordsWithA: (2) ['chair', 'sofa']
 const _1_wordsWithA = [];
 for (const word of _1_words) {
   if (word.includes('a')) {
@@ -23,7 +20,6 @@ for (const word of _1_words) {
 const _2_numbers = [-5, 0, 13, 100];
 
 // keep numbers less than 0
-// _2_lessThanZero: [-5]
 const _2_lessThanZero = [];
 for (const number of _2_numbers) {
   if (number < 0) {
@@ -32,7 +28,6 @@ for (const number of _2_numbers) {
 }
 
 // keep numbers that are divisible by 2
-// _3_evenNumbers: (2) [0, 100];
 const _3_evenNumbers = [];
 for (const number of _2_numbers) {
   if (number % 2 === 0) {

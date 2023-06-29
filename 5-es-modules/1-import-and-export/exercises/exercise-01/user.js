@@ -1,4 +1,4 @@
 debugger;
 
-export const user = 'Marko';
 console.log('executing user.js');
+export const user = 'Marko';
