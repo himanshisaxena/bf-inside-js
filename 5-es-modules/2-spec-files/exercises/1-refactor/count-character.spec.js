@@ -1,5 +1,4 @@
-
-import countCharacter from './count-character.js';
+import { countCharacter } from './count-character.js';
 
 describe('countCharacter: how many times a specific character appears in a string.', () => {
   describe('how the function counts characters', () => {

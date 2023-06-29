@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 // -- declare variables (this is correct) --
@@ -10,6 +8,8 @@ const bReference = b;
 let temp;
 
 // -- swap reference types (write this code) --
+
+[a, b] = [b, a];
 
 // -- assert the reference types (this is correct) --
 console.assert(a === bReference, 'a references the object with strings');

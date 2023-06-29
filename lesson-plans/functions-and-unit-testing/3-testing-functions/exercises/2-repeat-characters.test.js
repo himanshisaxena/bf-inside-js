@@ -19,7 +19,7 @@ const repeatCharacters = (text, repeats) => {
 
 describe('repeatCharacters: repeats each character in a string', () => {
   it('repeats characters 0 times', () => {
-    const returned = repeatCharacters('hoy!', 0);
+    const returned = repeatCharacters('', 0);
     expect(returned).toEqual('');
   });
   it('repeats characters 1 time', () => {

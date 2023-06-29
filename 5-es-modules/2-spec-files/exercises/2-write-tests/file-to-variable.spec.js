@@ -1,19 +1,17 @@
-// #todo
-import fileToVariable from './file-to-variable.js';
+import { fileToVariable } from './file-to-variable.js';
 
-describe('Converts a kebab-case file name from to camel-case variable name', () => {
-  describe('the convert cebab-case', () => {
-    it('conver file name', () => {
+describe('fileToVariable', () => {
+  describe('change kebab-case file name', () => {
+    it('fileToVariable', () => {
+      const actual = fileToVariable('file-to-variable.js');
       const expected = 'fileToVariable';
-      const returned = fileToVariable('file-to-variable.js');
-      expect(returned).toEqual(expected);
+      expect(actual).toEqual(expected);
     });
   });
-  describe('the default parameter', () => {
-    it('conver file name', () => {
-      const expected = '';
-      const returned = fileToVariable('');
-      expect(returned).toEqual(expected);
-    });
+
+  it('doMagic', () => {
+    const actual = fileToVariable('do-magic.js');
+    const expected = 'doMagic';
+    expect(actual).toEqual(expected);
   });
 });

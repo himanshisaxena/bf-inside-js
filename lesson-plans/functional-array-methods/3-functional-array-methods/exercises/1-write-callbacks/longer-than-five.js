@@ -5,9 +5,5 @@
  * @returns {boolean} is the string longer than 5?
  */
 export const longerThanFive = (str) => {
-  if (str.length > 5) {
-    return true;
-  } else {
-    return false;
-  }
+  return str.length > 5 ? true : false
 };

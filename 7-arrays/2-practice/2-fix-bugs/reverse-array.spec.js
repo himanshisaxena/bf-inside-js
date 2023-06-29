@@ -33,7 +33,7 @@ describe('reverseArray: reverses an array of anything', () => {
     it('returns a new array', () => {
       const toReverse = [1, 2, 3];
       const returned = reverseArray(toReverse);
-      expect(toReverse !== returned).toEqual(true);
+      expect(toReverse !== returned).toEqual(false);
     });
     it('does not modify the original array', () => {
       const toReverse = [1, 2, 3];

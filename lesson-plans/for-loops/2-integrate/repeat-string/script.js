@@ -4,17 +4,16 @@ document.getElementById('repeat-it').addEventListener('click', () => {
   debugger;
 
   // read user values
-let num = readNumber('number-of-times');
-let text = readString ('user-text');
+  let userText = readString('user-text');
+
+  let numberOfTimes = readNumber('number-of-times')
+
   // repeat the string
-let repeatChar = '';
-
-  for (let j = 0; j < num; j++) {
-     repeatChar += text;
-  
-}
+    let repeated = '';
+    for (let j = 0; j < numberOfTimes; j++){
+    repeated += userText;
+    }
   // display the repeated string
-  display ('repeated-output', repeatChar);
+
+  display('repeated-output', repeated);
 });
-
-

@@ -42,7 +42,7 @@ describe('filter: removes specific characters from a string', () => {
     });
     it('has an empty string for the first default param', () => {
       const returned = filter();
-      expect(returned).toEqual();
+      expect(returned).toEqual('');
     });
   });
 });

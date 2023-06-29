@@ -10,9 +10,8 @@ const scramble = (param1, param2, param3) => {
 };
 
 const _1_actual = scramble('a', 'c', 'b');
-const _1_expect = 'bac';
+const _1_expect = ('bac');
 console.assert(_1_actual === _1_expect, 'Test 1');
-
 
 const _2_expect = 'cab';
 const _2_actual = scramble('a', 'b', 'c');

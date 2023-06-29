@@ -3,6 +3,8 @@
  * @param {any} value - any javascript value
  * @returns {string} the value's type
  */
+
 export const typeOfValue = (value) => {
-  return typeof value;
+  let returned = String(typeof value);
+  return returned;
 };

@@ -1,6 +1,7 @@
 'use strict';
 
 // --- declare callbacks ---
+
 const isGreaterThanFive = (x = 0) => {
   return x > 5;
 };
@@ -19,19 +20,17 @@ const isEven = (x = 0) => {
  * @param {Function} cb - What to check for.
  * @returns {string} "neither", "one" or "both"
  */
-const checkThem = (num1 = 0, num2 = 0, cb) => {
-  const isNumOnePassed = cb(num1);
-  const isNumTwoPassed = cb(num2);
 
-  if (isNumOnePassed && isNumTwoPassed) {
+const checkThem = (num1, num2, cb) => {
+  const isOnePassed = cb(num1);
+  const isTwoPassed = cb(num2);
+  if (isOnePassed && isTwoPassed) {
     return 'both';
-  } else if (isNumOnePassed && !isNumTwoPassed) {
+  } else if (isOnePassed && !isTwoPassed) {
     return 'one';
-  } else if (!isNumOnePassed && isNumTwoPassed) {
+  } else if (!isOnePassed && isTwoPassed) {
     return 'two';
-  } else {
-    return 'neither';
-  }
+  } else return 'neither' ;
 };
 
 // --- test your function ---

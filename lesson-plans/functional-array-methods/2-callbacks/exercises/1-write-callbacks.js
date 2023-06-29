@@ -1,7 +1,5 @@
 'use strict';
-
 // --- declare function that uses the callbacks ---
-
 /**
  * Checks if something is true about a string.
  *
@@ -9,37 +7,41 @@
  * @param {Function} cb - The function call with the text.
  * @returns {String} "yes" or "no", depending on the cb's return value.
  */
-console.log('begin');
-
 const checkIt = (text = '', cb) => {
   const itIsSo = cb(text);
   return itIsSo ? 'yes' : 'no';
 };
-
 // --- declare and test first callback ---
-
 /**
  * Checks if a string is a palindrome.
  * (the same forwards and backwards)
  *
  * @param {string} [str=''] - The string to check.
  * @returns {boolean} Whether or not the string is a palindrome.
+ *
+ *
  */
+function reverseWords(str) {
+  let reverseWordArr = str
+    .split(' ')
+    .map((word) => word.split('').reverse().join(''));
+  return reverseWordArr.join(' ');
+}
 const isPalindrome = (str = '') => {
-  return str.split('').reverse().join('') === str;
+  if (reverseWords(str) === str) {
+    return true;
+  } else {
+    return false;
+  }
 };
-
 const check1 = checkIt('RacEcaR', isPalindrome);
 console.assert(check1 === 'yes', 'Test 1');
-
 const check2 = checkIt('Racecar', isPalindrome);
 console.assert(check2 === 'no', 'Test 2');
-
 const check3 = checkIt('-+(*)+-', isPalindrome);
 console.assert(check3 === 'no', 'Test 3');
 
 // --- declare and test second callback ---
-
 /**
  * Checks if a string is "JavaScript" or "JS".
  * The check is not case-sensitive.
@@ -47,21 +49,18 @@ console.assert(check3 === 'no', 'Test 3');
  * @param {string} [str=''] - The string to check.
  * @returns {boolean} Whether or not the string is JS.
  */
+
 const isJS = (txt = '') => {
-  // return txt.toLowerCase() === 'javascript' || txt.toLowerCase() === 'js';
-  return /JS/i.test(txt) || /JavaScript/i.test(txt)
+  if (/javascript/i.test(txt) || /js/i.test(txt)) {
+    return true;
+  } else return false;
 };
 
 const check4 = checkIt('JavaSCripT', isJS);
 console.assert(check4 === 'yes', 'Test 4');
-
 const check5 = checkIt('javaskript', isJS);
 console.assert(check5 === 'no', 'Test 5');
-
 const check6 = checkIt('JS', isJS);
 console.assert(check6 === 'yes', 'Test 6');
-
 const check7 = checkIt('js', isJS);
 console.assert(check7 === 'yes', 'Test 7');
-
-console.log('finish');

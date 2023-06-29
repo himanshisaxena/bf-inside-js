@@ -10,7 +10,7 @@ const scramble = (param1, param2, param3) => {
   return result;
 };
 
-const returned1 = scramble('c','a','b');
+const returned1 = scramble('c', 'a', 'b');
 console.assert(returned1 === 'cab', 'Test 1');
 
 const returned2 = scramble('a', 'b', 'c');

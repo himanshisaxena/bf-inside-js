@@ -1,18 +1,9 @@
-/**
- * Repeats a string a specific number of times.
- *
- * @param {string} [text=''] - the string to repeat. defaults to empty string
- * @param {number} [repetitions=1] - how many times to repeat. defaults to 1
- *  repetitions must be greater than zero, and must be an integer
- * @return {string} the text repeated as many times as repetitions
- */
-
-import repeatString from './repeat-string.js';
+import { repeatString } from './repeat-string.js';
 
 describe('repeatString: repeats a string', () => {
   describe('an empty string', () => {
     it('repeat an empty string 0 times -> ""', () => {
-      expect(repeatString('', 0)).toEqual('');
+      expect(repeatString('', 0)).toEqual('1');
     });
     it('repeat an empty string 10 times -> ""', () => {
       expect(repeatString('', 10)).toEqual('');

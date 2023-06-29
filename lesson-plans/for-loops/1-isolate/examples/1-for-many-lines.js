@@ -1,6 +1,3 @@
-// #todo
-
-// 1: use strict (in JSTutor)
 'use strict';
 
 /*
@@ -32,7 +29,6 @@ for (
 ) {
   // 4, 7, 10: log the current value of `step`
   console.log(step);
-  
 }
 
 // 13: done
